@@ -14,18 +14,7 @@ def prob_4():
             n = str(a*b)
             b -= 1
 
-            # Check that it's a palindrome.
-            palindrome = True
-            start = 0
-            end = len(n) - 1
-            while start < end:
-                if n[start] != n[end]:
-                    palindrome = False
-                    break
-                start += 1
-                end -= 1
-            
-            if palindrome:
+            if n == n[::-1]:
                 num = max(int(n), num)
 
         
