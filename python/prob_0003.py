@@ -1,6 +1,6 @@
 def prob_3():
     '''
-    Answer: 
+    Answer: 6857
     '''
     n = 600851475143
     largest_prime = 2
