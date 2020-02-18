@@ -1,27 +1,27 @@
-def prob_4():
-    '''
-    Answer: 906609
-    '''
+def prob_4(num_digits):
+    # O(n^2) brute force solution.
     
-    num = -1
-    a = 999
+    largest_palindrome = -1
+    max_num = 10**num_digits - 1
+    min_num = 10**(num_digits-1) - 1
+    a = max_num
 
-    while a > 99:
+    while a > min_num:
 
-        b = 999
-        while b > 99:
+        b = max_num
+        while b > min_num:
             
             n = str(a*b)
             b -= 1
 
             if n == n[::-1]:
-                num = max(int(n), num)
-
+                largest_palindrome = max(int(n), largest_palindrome)
         
         a -= 1
 
-    return num
+    return largest_palindrome
 
 
 if __name__ == '__main__':
-    print(prob_4())
+    # Answer: 906609
+    print(prob_4(3))
