@@ -1,9 +1,6 @@
-def prob_6():
-    '''
-    Answer: 25164150
-    '''
+def prob_6(n):
+    # O(n) solution.
 
-    n = 100
     sum_squares = 0
     squared_sums = 0
 
@@ -15,4 +12,5 @@ def prob_6():
 
 
 if __name__ == '__main__':
-    print(prob_6())
+    # Answer: 25164150
+    print(prob_6(100))
