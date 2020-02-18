@@ -1,9 +1,6 @@
-def prob_5():
-    '''
-    Answer: 232792560
-    '''
+def prob_5(n):
+    # O(n^2) solution.
     
-    n = 20
     primes = {}
 
     # Get the prime factors of all numbers up to n, then multiply them and return.
@@ -34,4 +31,5 @@ def prob_5():
 
 
 if __name__ == '__main__':
-    print(prob_5())
+    # Answer: 232792560
+    print(prob_5(20))
