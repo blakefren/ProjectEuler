@@ -1,9 +1,6 @@
-def prob_3():
-    '''
-    Answer: 6857
-    '''
+def prob_3(n):
+    # O(sqrt(n)) solution.
     
-    n = 600851475143
     largest_prime = 2
     i = largest_prime
     
@@ -23,4 +20,5 @@ def prob_3():
 
 
 if __name__ == '__main__':
-    print(prob_3())
+    # Answer: 6857
+    print(prob_3(600851475143))
