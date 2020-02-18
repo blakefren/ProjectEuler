@@ -1,9 +1,6 @@
-def prob_7():
-    '''
-    Answer: 104743
-    '''
-
-    n = 10001
+def prob_7(n):
+    # O(n*p) solution, where p is the number of primes less than n.
+    
     primes = [2, 3]
     i = 4
 
@@ -24,4 +21,5 @@ def prob_7():
 
 
 if __name__ == '__main__':
-    print(prob_7())
+    # Answer: 104743
+    print(prob_7(10001))
