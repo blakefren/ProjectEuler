@@ -1,20 +1,26 @@
 def prob_8(window_size, number):
-    # O(n*l) solution, where n is the number of digits in number and l is window_size.
+    # ~O(n) average case - O(nl) worst case - solution, where n is the number of digits in number and l is window_size.
 
     number = str(number)
     largest_product = 0
-    digits = list(map(int, list(number[:window_size])))
+
+    # Create a running product
+    running_product = 1
+    for digit in number[:window_size]:
+        running_product *= int(digit)
 
     for i in range(window_size+1, len(number)):
+        
+        # Check divisor for divide by zero error.
+        if int(number[i-window_size]) == 0:
+            running_product = 1
+            for digit in number[i-window_size+1:i]:
+                running_product *= int(digit)
+        else:
+            running_product //= int(number[i-window_size])
 
-        digits.pop(0)
-        digits.append(int(number[i]))
-
-        prod = 1
-        for digit in digits:
-            prod *= digit
-
-        largest_product = max(largest_product, prod)
+        running_product *= int(number[i])
+        largest_product = max(largest_product, running_product)
     
     return largest_product
 
