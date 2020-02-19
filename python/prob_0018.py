@@ -16,7 +16,7 @@ def prob_18(tree):
 
 
 if __name__ == '__main__':
-    # Answer: 
+    # Answer: 1074
     tree = ['75',
         '95 64',
         '17 47 82',
