@@ -1,5 +1,5 @@
 def prob_27(max_range):
-    # O(m*n) solution, where m is the max range and n is the max generatd prime number.
+    # O(mn) solution, where m is the max range and n is the max generatd prime number.
     
     # Generate primes.
     upper_prime = 10**5
